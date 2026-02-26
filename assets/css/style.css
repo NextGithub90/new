@@ -1219,6 +1219,194 @@ html {
     }
 }
 
+/* ===== PROYEKSI KEUANGAN TABLE ===== */
+.proyeksi-table-wrapper {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    border: 2px solid var(--gray-100);
+}
+
+.proyeksi-table {
+    margin-bottom: 0;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.proyeksi-table thead tr {
+    background: linear-gradient(135deg, var(--gray-900) 0%, #374151 100%);
+}
+
+.proyeksi-header-label {
+    padding: 1rem 1.5rem !important;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white) !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: none !important;
+    width: 35%;
+}
+
+.proyeksi-header-col {
+    padding: 1rem 1.5rem !important;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--white) !important;
+    text-align: right;
+    border: none !important;
+    width: 21.67%;
+}
+
+.proyeksi-table tbody tr {
+    transition: background-color 0.2s ease;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.proyeksi-table tbody tr:hover {
+    background-color: rgba(255, 107, 53, 0.04);
+}
+
+.proyeksi-label {
+    padding: 0.85rem 1.5rem !important;
+    font-size: 0.92rem;
+    color: var(--gray-800);
+    border: none !important;
+    white-space: nowrap;
+}
+
+.proyeksi-value {
+    padding: 0.85rem 1.5rem !important;
+    font-size: 0.92rem;
+    color: var(--gray-700);
+    text-align: right;
+    border: none !important;
+    white-space: nowrap;
+}
+
+.proyeksi-value-percent {
+    padding: 0.5rem 1.5rem !important;
+    font-size: 0.82rem;
+    color: var(--gray-500);
+    text-align: right;
+    border: none !important;
+    font-style: italic;
+}
+
+/* Total rows (TOTAL OMSET, TOTAL BIAYA VARIABLE, TOTA BIAYA TETAP) */
+.proyeksi-total-row {
+    background: var(--gray-50) !important;
+    border-top: 2px solid var(--gray-200) !important;
+    border-bottom: 2px solid var(--gray-200) !important;
+}
+
+.proyeksi-total-row .proyeksi-label,
+.proyeksi-total-row .proyeksi-value {
+    font-weight: 700;
+    color: var(--gray-900);
+}
+
+/* Highlight rows (LABA KOTOR, TOTAL PENDAPATAN OPERASIONAL) */
+.proyeksi-highlight-row {
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.08) 0%, rgba(255, 140, 66, 0.08) 100%) !important;
+    border-top: 2px solid var(--orange-light) !important;
+    border-bottom: 2px solid var(--orange-light) !important;
+}
+
+.proyeksi-highlight-row .proyeksi-label,
+.proyeksi-highlight-row .proyeksi-value {
+    font-weight: 700;
+    color: var(--orange-dark);
+}
+
+/* Final row (LABA BERSIH SEBELUM TEMPAT) */
+.proyeksi-final-row {
+    background: linear-gradient(135deg, var(--orange-primary) 0%, var(--orange-secondary) 100%) !important;
+    border-top: none !important;
+}
+
+.proyeksi-final-row .proyeksi-label,
+.proyeksi-final-row .proyeksi-value {
+    color: var(--white) !important;
+    font-weight: 800;
+    font-size: 0.95rem;
+}
+
+.proyeksi-final-percent .proyeksi-value-percent {
+    color: var(--orange-primary);
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Percent rows */
+.proyeksi-percent-row {
+    border-bottom: 1px solid var(--gray-100) !important;
+}
+
+.proyeksi-percent-row:hover {
+    background-color: transparent !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .proyeksi-table-wrapper {
+        border-radius: 12px;
+    }
+
+    .proyeksi-header-label,
+    .proyeksi-header-col {
+        padding: 0.75rem 0.75rem !important;
+        font-size: 0.8rem;
+    }
+
+    .proyeksi-label {
+        padding: 0.65rem 0.75rem !important;
+        font-size: 0.78rem;
+        white-space: normal;
+    }
+
+    .proyeksi-value {
+        padding: 0.65rem 0.5rem !important;
+        font-size: 0.78rem;
+    }
+
+    .proyeksi-value-percent {
+        padding: 0.35rem 0.5rem !important;
+        font-size: 0.72rem;
+    }
+
+    .proyeksi-final-row .proyeksi-label,
+    .proyeksi-final-row .proyeksi-value {
+        font-size: 0.82rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .proyeksi-header-label {
+        width: 30%;
+    }
+
+    .proyeksi-header-col {
+        width: 23.33%;
+    }
+
+    .proyeksi-label {
+        font-size: 0.7rem;
+        padding: 0.5rem 0.5rem !important;
+    }
+
+    .proyeksi-value {
+        font-size: 0.7rem;
+        padding: 0.5rem 0.35rem !important;
+    }
+
+    .proyeksi-value-percent {
+        font-size: 0.65rem;
+        padding: 0.25rem 0.35rem !important;
+    }
+}
+
 /* ===== ANIMATIONS ===== */
 @keyframes fadeInUp {
     from {
